@@ -4,6 +4,7 @@ import { api } from "~/utils/api";
 
 export default function Home() {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  const { data: exampleData } = api.example.getAll.useQuery();
 
   return (
     <>
@@ -44,6 +45,14 @@ export default function Home() {
           <p className="text-2xl text-white">
             {hello.data ? hello.data.greeting : "Loading tRPC query..."}
           </p>
+          <div>
+            <h4>Data back from the db</h4>
+            <div className="flex flex-col items-center text-white">
+              {exampleData?.map((data) => (
+                <span key={data.id}>{data.id}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </main>
     </>
