@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "sst bind next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "console": "npx sst dev",
+    "deploy": "npx sst deploy --stage prod"
   },
   "dependencies": {
     "@prisma/client": "^4.14.0",
@@ -39,7 +41,10 @@
     "prettier-plugin-tailwindcss": "^0.2.8",
     "prisma": "^4.14.0",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "sst": "^2.19.1",
+    "aws-cdk-lib": "2.84.0",
+    "constructs": "10.1.156"
   },
   "ct3aMetadata": {
     "initVersion": "7.15.0"
