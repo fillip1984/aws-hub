@@ -14,16 +14,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="text-white">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <h4 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Welcome to illizen...
-          </h4>
+        <div className="flex flex-col items-center justify-center gap-4 px-4 py-16">
+          <h2>Welcome to illizen...</h2>
+
           <p>I&apos;ll be using this site to play around with aws</p>
-          <p className="text-2xl">
-            {hello.data ? hello.data.greeting : "Loading tRPC query..."}
-          </p>
+
+          <h3>{hello.data ? hello.data.greeting : "Loading tRPC query..."}</h3>
+
           <div>
-            <h4>Data back from the db</h4>
+            <h3>Data back from the db</h3>
             <div className="flex flex-col items-center">
               {exampleData?.map((data) => (
                 <span key={data.id}>{data.id}</span>
