@@ -6,6 +6,20 @@ export default function Home() {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
   const { data: exampleData } = api.example.getAll.useQuery();
 
+  const apps = [
+    {
+      name: "ex-nihilo",
+      description:
+        "Agenda, time tracking, habit forming, productivity tool (mobile UI)",
+      url: "https://ex-nihilo.illizen.com",
+    },
+    {
+      name: "inveniam",
+      description: "Kanban productivity tool",
+      url: "https://ex-nihilo.illizen.com",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -20,19 +34,19 @@ export default function Home() {
           <div>
             <h3>Apps</h3>
             <div className="my-4 flex flex-wrap gap-2">
-              <Link
-                href="https://ex-nihilo.illizen.com"
-                className="min-h-[210px] min-w-[400px] cursor-pointer rounded-lg border border-white/40 p-4">
-                <h4>ex-nihilo</h4>
-                <p className="mt-2">
-                  Agenda, time tracking, habit forming, productivity tool
-                  (mobile UI)
-                </p>
-              </Link>
+              {apps.map((app) => (
+                <Link
+                  key={app.name}
+                  href={app.url}
+                  className="h-[210px] w-[400px] cursor-pointer rounded-lg border border-white/40 p-4">
+                  <h4>{app.name}</h4>
+                  <p className="mt-2">{app.description}</p>
+                </Link>
+              ))}
             </div>
           </div>
 
-          <p>I&apos;ll be using this site to play around with aws</p>
+          {/* <p>I&apos;ll be using this site to play around with aws</p>
 
           <h3>{hello.data ? hello.data.greeting : "Loading tRPC query..."}</h3>
 
@@ -43,7 +57,7 @@ export default function Home() {
                 <span key={data.id}>{data.id}</span>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </main>
     </>
