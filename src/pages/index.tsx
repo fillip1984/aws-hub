@@ -16,7 +16,7 @@ export default function Home() {
     {
       name: "inveniam",
       description: "Kanban productivity tool",
-      url: "https://ex-nihilo.illizen.com",
+      url: "https://inveniam.illizen.com",
     },
   ];
 
