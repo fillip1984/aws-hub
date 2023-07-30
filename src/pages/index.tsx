@@ -1,17 +1,18 @@
 import Head from "next/head";
 import Link from "next/link";
-import { api } from "~/utils/api";
 
 export default function Home() {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
-  const { data: exampleData } = api.example.getAll.useQuery();
-
   const apps = [
     {
       name: "ex-nihilo",
       description:
         "Agenda, time tracking, habit forming, productivity tool (mobile UI)",
       url: "https://ex-nihilo.illizen.com",
+    },
+    {
+      name: "desidero",
+      description: "Tool to define and track goals",
+      url: "https://desidero.illizen.com",
     },
     {
       name: "inveniam",
@@ -45,19 +46,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-
-          {/* <p>I&apos;ll be using this site to play around with aws</p>
-
-          <h3>{hello.data ? hello.data.greeting : "Loading tRPC query..."}</h3>
-
-          <div>
-            <h3>Data back from the db</h3>
-            <div className="flex flex-col items-center">
-              {exampleData?.map((data) => (
-                <span key={data.id}>{data.id}</span>
-              ))}
-            </div>
-          </div> */}
         </div>
       </main>
     </>
