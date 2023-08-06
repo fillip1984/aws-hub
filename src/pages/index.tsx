@@ -10,14 +10,19 @@ export default function Home() {
       url: "https://ex-nihilo.illizen.com",
     },
     {
-      name: "desidero",
-      description: "Tool to define and track goals",
-      url: "https://desidero.illizen.com",
-    },
-    {
       name: "inveniam",
       description: "Kanban productivity tool",
       url: "https://inveniam.illizen.com",
+    },
+    {
+      name: "wibi",
+      description: "Budgeting tool",
+      url: "https://wibi.illizen.com",
+    },
+    {
+      name: "desidero",
+      description: "Tool to define and track goals",
+      url: "https://desidero.illizen.com",
     },
   ];
 
