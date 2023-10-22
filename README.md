@@ -1,3 +1,6 @@
+# Retired and replaced by hub
+
+Not much is changing but I'm renaming this project and replacing it with this one here: [hub](https://github.com/fillip1984/hub)
 # aws-hub
 
 This will be the landing page for my aws hosted site. From here, I'll link out to other applications I use
